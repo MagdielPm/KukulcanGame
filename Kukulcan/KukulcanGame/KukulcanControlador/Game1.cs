@@ -11,7 +11,9 @@ using KukulcanGame.KukulcanVista;
 
 namespace KukulcanGame
 {
- 
+    /// <summary>
+    /// Clase principal mediante la cual se ejecutan los juegos
+    /// </summary>
     public class Game1 : Game
     {
         /// <summary>
@@ -102,29 +104,27 @@ namespace KukulcanGame
         /// </summary>
         public Game1()
         {
-            /// <summary>
-            /// Este codigo hace cosas muy simples, como generar la ventana de graficos
-            /// ponerle nombre al juego y definir el nombre del Content usado para las imagenes
-            /// algunas cosas se hacen por defecto
-            /// </summary>
+            
+            // Este codigo hace cosas muy simples, como generar la ventana de graficos
+            // ponerle nombre al juego y definir el nombre del Content usado para las imagenes
+            // algunas cosas se hacen por defecto
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             Window.Title = "Kukulcan Game";
             
             graphics.PreferredBackBufferHeight = 750;
             graphics.PreferredBackBufferWidth = 1500;
-            /// <summary>
-            /// tomamos valores para las letras del nombre del jugador
-            /// 
-            /// Tambien posicionamos el juego en el centro de la pantalla
-            /// </summary>
+
+            // tomamos valores para las letras del nombre del jugador
+            // Tambien posicionamos el juego en el centro de la pantalla
+ 
             letra1 = (char)65;
             letra2 =(char)65;
 
             Window.Position = new Point(
                 (GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width / 2) - (graphics.PreferredBackBufferWidth / 2),
                 (GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height / 2) - (graphics.PreferredBackBufferHeight / 2));
-            /// Aqui iniciamos la lista de imagenes que tomara el cursor cuando haga un mouseOver
+            // Aqui iniciamos la lista de imagenes que tomara el cursor cuando haga un mouseOver
             lstManoCargando = new List<Texture2D>();
             mapa = new Mapa();
             snake = new Body();
@@ -148,10 +148,10 @@ namespace KukulcanGame
         {
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            /// <summary>
-            /// Realizamos la carga de contenidos que estan en el content para asignarselos a las variables definidas
-            /// en la parte superior del codigo 
-            /// </summary>
+
+            // Realizamos la carga de contenidos que estan en el content para asignarselos a las variables definidas
+            // en la parte superior del codigo 
+
             #region Texturas
             mayan = Content.Load<SpriteFont>("Mayan");
             mayanBig = Content.Load<SpriteFont>("MayanBig");
@@ -180,10 +180,9 @@ namespace KukulcanGame
                                                                      
 
             #endregion
-            /// <summary>
-            /// Definimos los rectangulos de algunos botones que usaremos en las pantallas del juego
-            /// al igual que los sonidos y musica de fondo 
-            /// </summary>
+
+            // Definimos los rectangulos de algunos botones que usaremos en las pantallas del juego
+            // al igual que los sonidos y musica de fondo 
             vcSplash = new Vector2(365,20);
             vcJugar = new Vector2(215, 390);
             vcScores = new Vector2(615,390);
@@ -222,10 +221,10 @@ namespace KukulcanGame
         /// <param name="gameTime"></param>
         public void gameSnake(GameTime gameTime)
         {
-            /// <summary>
-            /// Validamos si la comida aparece en el cuerpo del snake, si aparece dentro, la 
-            /// reseteamos y aparecemos la comida en otro lugar
-            /// </summary>
+            
+            // Validamos si la comida aparece en el cuerpo del snake, si aparece dentro, la 
+            // reseteamos y aparecemos la comida en otro lugar
+            
             for (int i = 1; i < snake.snakePosition.Count; i++)
             {
                 if (snake.snakePosition[i].X == f.food.X && snake.snakePosition[i].Y == f.food.Y)
@@ -233,25 +232,25 @@ namespace KukulcanGame
                     f.resetComida();
                 }
             }
-            ///Llamamos a la funcion que controla el snake mediante el kinect
+            //Llamamos a la funcion que controla el snake mediante el kinect
             tracker.controlKinect(snake);
-            /// <summary>
-            /// Si apretamos ESC salimos automaticamente del juego
-            /// </summary>
+ 
+            // Si apretamos ESC salimos automaticamente del juego
+
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
-            ///Aqui determinamos mediante el Bool si el juego termino, si si nos llevara a la ventana donde
-            ///el usuario debe guardad su puntaje, si no, el juego continua
+            //Aqui determinamos mediante el Bool si el juego termino, si si nos llevara a la ventana donde
+            //el usuario debe guardad su puntaje, si no, el juego continua
             if (gameOver) {
                 gameOver = false;
                 mapa.pantallas = mapa.saveScores();
             }
-            /// <summary>
-            /// En esta seccion del metodo se controla la velocidad del juego, tomamos la velocidad del gameTime
-            /// y la distribuimos con los frames para que el snake vaya un poco mas lento, pero por cada 
-            /// 5 elititos el snake va mas rapido, tambien se determina la direccion del snake 
-            /// mediante los movimientos del jugador
-            /// </summary>
+
+            // En esta seccion del metodo se controla la velocidad del juego, tomamos la velocidad del gameTime
+            // y la distribuimos con los frames para que el snake vaya un poco mas lento, pero por cada 
+            // 5 elititos el snake va mas rapido, tambien se determina la direccion del snake 
+            // mediante los movimientos del jugador
+
             if (gameTime.TotalGameTime.TotalMilliseconds > snake.lastT + velocidad)
             {
                 snake.ltd = snake.direccion;
@@ -278,11 +277,10 @@ namespace KukulcanGame
                         snake.snakePosition[0] += new Vector2(1, 0);
                         break;
                 }
-                /// <summary>
-                /// Agreamos un nuevo cuadrito al snake al determinar si hay una colision entre la comida y la cabeza del snake
-                /// incrementamos el puntaje, agregamos un sonido y validamos el puntaje para ver si ira mas 
-                /// rapido el snake 
-                /// </summary>
+
+                // Agreamos un nuevo cuadrito al snake al determinar si hay una colision entre la comida y la cabeza del snake
+                // incrementamos el puntaje, agregamos un sonido y validamos el puntaje para ver si ira mas 
+                // rapido el snake 
                 if (snake.snakePosition[0].X == f.food.X && snake.snakePosition[0].Y == f.food.Y)
                 {
                     snake.snakePosition.Add(snake.snakePosition[snake.snakePosition.Count - 1]);
@@ -297,10 +295,9 @@ namespace KukulcanGame
                     }
 
                 }
-                /// <summary>
-                /// Validamos la colision del snake con su propio cuerpo, si choca la cabeza con alguna parte de su cuerpo
-                /// el juego habra terminado y cargamos las letras de la siguiente pantalla
-                /// </summary>
+
+                // Validamos la colision del snake con su propio cuerpo, si choca la cabeza con alguna parte de su cuerpo
+                // el juego habra terminado y cargamos las letras de la siguiente pantalla
                 for (int i = 1; i < snake.snakePosition.Count; i++)
                 {
                     if (snake.snakePosition[0].X == snake.snakePosition[i].X && snake.snakePosition[0].Y == snake.snakePosition[i].Y)
@@ -311,9 +308,9 @@ namespace KukulcanGame
                         letra2 = (char)65;
                     }
                 }
-                /// <summary>
-                /// Si el snake choca con las paredes, pierde y cargamos las letras de la siguiente pantalla
-                /// </summary>
+
+                // Si el snake choca con las paredes, pierde y cargamos las letras de la siguiente pantalla
+
                 if (snake.snakePosition[0].X < 1 || snake.snakePosition[0].Y < 1 ||
                     snake.snakePosition[0].Y  > (650/ bSize) ||
                     snake.snakePosition[0].X  > (900 / bSize))
@@ -739,13 +736,13 @@ namespace KukulcanGame
             if ( Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
             tracker.uptade(mapa);
-            /// <summary>
-            /// Este switch nos sirve para determinar los estados del juego, aqui se desarrolla la logica del juego
-            /// y es el loop que nos ayuda a mover los vectores y rectangulos del juego
-            /// Todo el juego se desarrolla en este loop y el de draw
-            /// Cada case es un estado del juego, en cada case esta la logica utilizada en cada seccion, se realizaron 
-            /// metodos para volver menos grande esta seccion, anque se espera que se pueda optimizar y volver modular
-            /// </summary>
+
+            // Este switch nos sirve para determinar los estados del juego, aqui se desarrolla la logica del juego
+            // y es el loop que nos ayuda a mover los vectores y rectangulos del juego
+            // Todo el juego se desarrolla en este loop y el de draw
+            // Cada case es un estado del juego, en cada case esta la logica utilizada en cada seccion, se realizaron 
+            // metodos para volver menos grande esta seccion, anque se espera que se pueda optimizar y volver modular
+
             switch (mapa.pantallas)
             {
                 case Mapa.GameState.SplashScreen:
@@ -887,11 +884,9 @@ namespace KukulcanGame
                     spriteBatch.DrawString(mayan, "Líder de proyecto:", new Vector2(170, 315), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Magdiel Pech ", new Vector2(170, 365), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Desarrolladores:", new Vector2(480, 315), new Color(208, 196, 188));
-                    spriteBatch.DrawString(mayan, "Alvar Peniche", new Vector2(480, 365), new Color(208, 196, 188));
-                    spriteBatch.DrawString(mayan, "Rodrigo Euan", new Vector2(480, 425), new Color(208, 196, 188));
+                    spriteBatch.DrawString(mayan, "Magdiel Pech", new Vector2(480, 365), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Diseñadores:", new Vector2(780, 315), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Huriata Bonilla", new Vector2(780, 365), new Color(208, 196, 188));
-                    spriteBatch.DrawString(mayan, "Luis Ávila", new Vector2(780, 425), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Audio y sonidos:", new Vector2(1070, 315), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Luis Ávila", new Vector2(1070, 365), new Color(208, 196, 188));
                     spriteBatch.DrawString(mayan, "Agradecimientos especiales:   Edgar Cambranes", new Vector2(330, 520), new Color(208, 196, 188));

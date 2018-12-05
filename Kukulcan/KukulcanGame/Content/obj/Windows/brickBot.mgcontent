@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Magdiel/Desktop/Proyecto/Kukulcan/Kukulcan/KukulcanGame/Content/brickBot.png</SourceFile>
+  <SourceFile>C:/Users/Magdiel/Desktop/Materias/Proyectos/Proyecto Kukulcan/Kukulcan/Kukulcan/KukulcanGame/Content/brickBot.png</SourceFile>
   <SourceTime>2018-10-30T11:51:32.9837763-06:00</SourceTime>
-  <DestFile>C:/Users/Magdiel/Desktop/Proyecto/Kukulcan/Kukulcan/KukulcanGame/Content/bin/Windows/brickBot.xnb</DestFile>
-  <DestTime>2018-12-04T18:02:50.462802-06:00</DestTime>
+  <DestFile>C:/Users/Magdiel/Desktop/Materias/Proyectos/Proyecto Kukulcan/Kukulcan/Kukulcan/KukulcanGame/Content/bin/Windows/brickBot.xnb</DestFile>
+  <DestTime>2018-12-04T20:54:15.4589251-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T09:05:36-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>

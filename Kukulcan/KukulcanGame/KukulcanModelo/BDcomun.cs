@@ -8,6 +8,9 @@ using System.Data.SqlClient;
 
 namespace KukulcanGame
 {
+    /// <summary>
+    /// Clase que realiza la conexion con la base de datos y su gestion 
+    /// </summary>
     public class BDcomun
     {
 
@@ -20,17 +23,17 @@ namespace KukulcanGame
         {
 
             List<String> lstPuntajes = new List<string>();
-            /// <summary>
-            /// Creamos la apertura de la base de datos, mandando el localHost por defecto en phpMyAdmin con MySql en XAMPP,
-            /// pasamos el nombre de la BD y el User id, que por defecto es root
-            /// </summary>
+
+            // Creamos la apertura de la base de datos, mandando el localHost por defecto en phpMyAdmin con MySql en XAMPP,
+            // pasamos el nombre de la BD y el User id, que por defecto es root
+
             using (MySqlConnection conexion = new MySqlConnection("server=127.0.0.1; database=bdkukulcan; Uid=root; pwd=;"))
             {
                 conexion.Open();
-                /// <summary>
-                /// Se realiza una consulta a la base de datos en la tabla consulta y tomamos el nombre y el puntaje de `puntajes` ordenada de 
-                /// manera ascendente delimitado a los primeros 5 
-                /// </summary>
+
+                // Se realiza una consulta a la base de datos en la tabla consulta y tomamos el nombre y el puntaje de `puntajes` ordenada de 
+                // manera ascendente delimitado a los primeros 5 
+
                 MySqlCommand comando = new MySqlCommand(String.Format("SELECT nombre, puntaje FROM `puntajes` ORDER BY puntaje DESC LIMIT 5"), conexion);
                 MySqlDataReader reader = comando.ExecuteReader();
                 int i = 1;

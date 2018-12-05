@@ -1320,3 +1320,4 @@ C:\Users\Magdiel\Desktop\Proyecto\Kukulcan\Kukulcan\KukulcanGame\bin\Windows\x86
 C:\Users\Magdiel\Desktop\Proyecto\Kukulcan\Kukulcan\KukulcanGame\obj\x86\Debug\KukulcanGame.csprojResolveAssemblyReference.cache
 C:\Users\Magdiel\Desktop\Proyecto\Kukulcan\Kukulcan\KukulcanGame\obj\x86\Debug\KukulcanGame.exe
 C:\Users\Magdiel\Desktop\Proyecto\Kukulcan\Kukulcan\KukulcanGame\obj\x86\Debug\KukulcanGame.pdb
+C:\Users\Magdiel\Desktop\Materias\Proyectos\Proyecto Kukulcan\Kukulcan\Kukulcan\KukulcanGame\bin\Windows\x86\Debug\KukulcanGame.xml

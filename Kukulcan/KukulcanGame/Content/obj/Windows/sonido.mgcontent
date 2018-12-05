@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Magdiel/Desktop/Proyecto/Kukulcan/Kukulcan/KukulcanGame/Content/sonido.wav</SourceFile>
+  <SourceFile>C:/Users/Magdiel/Desktop/Materias/Proyectos/Proyecto Kukulcan/Kukulcan/Kukulcan/KukulcanGame/Content/sonido.wav</SourceFile>
   <SourceTime>2018-10-14T00:13:38.9302787-05:00</SourceTime>
-  <DestFile>C:/Users/Magdiel/Desktop/Proyecto/Kukulcan/Kukulcan/KukulcanGame/Content/bin/Windows/sonido.xnb</DestFile>
-  <DestTime>2018-12-04T18:02:59.0792647-06:00</DestTime>
+  <DestFile>C:/Users/Magdiel/Desktop/Materias/Proyectos/Proyecto Kukulcan/Kukulcan/Kukulcan/KukulcanGame/Content/bin/Windows/sonido.xnb</DestFile>
+  <DestTime>2018-12-04T20:54:24.5988791-06:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2017-03-01T09:05:36-06:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

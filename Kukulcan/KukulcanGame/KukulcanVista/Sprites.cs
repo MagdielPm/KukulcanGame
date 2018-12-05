@@ -196,6 +196,16 @@ namespace KukulcanGame.KukulcanVista
                 spriteBatch.Draw(brick, new Rectangle(400, i * bSize, bSize, bSize), Color.White);
             }
         }
+        /// <summary>
+        /// Metodo para generar la vista de guardar puntajes con parametros establecitos
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        /// <param name="menu"></param>
+        /// <param name="rcAumentarLetra1"></param>
+        /// <param name="rcAumentarLetra2"></param>
+        /// <param name="rcDisminuirLetra1"></param>
+        /// <param name="rcDisminuirLetra2"></param>
+        /// <param name="vcMenu"></param>
         public void saveScores(SpriteBatch spriteBatch, Vector2 menu, Rectangle rcAumentarLetra1, Rectangle rcAumentarLetra2, Rectangle rcDisminuirLetra1,
             Rectangle rcDisminuirLetra2, Vector2 vcMenu)
         {

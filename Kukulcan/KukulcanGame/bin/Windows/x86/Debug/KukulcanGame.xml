@@ -1,0 +1,876 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KukulcanGame</name>
+    </assembly>
+    <members>
+        <member name="F:KukulcanGame.KukulcanControlador.Body.snakePosition">
+            <summary>
+            Lista de vectores, donde posicionamos al snake
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.Body.direccion">
+            <summary>
+            Variables a utilizar en el juego siendo Direccion:
+            0 = arriba, 1 = abajo, 2 = izquierda y 3 = derecha
+            puntaje, ultima direccion y el tiempo
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.Body.puntaje">
+            <summary>
+            Variables a utilizar en el juego siendo Direccion:
+            0 = arriba, 1 = abajo, 2 = izquierda y 3 = derecha
+            puntaje, ultima direccion y el tiempo
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.Body.ltd">
+            <summary>
+            Variables a utilizar en el juego siendo Direccion:
+            0 = arriba, 1 = abajo, 2 = izquierda y 3 = derecha
+            puntaje, ultima direccion y el tiempo
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.Body.lastT">
+            <summary>
+            Variables a utilizar en el juego siendo Direccion:
+            0 = arriba, 1 = abajo, 2 = izquierda y 3 = derecha
+            puntaje, ultima direccion y el tiempo
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Body.startGame">
+            <summary>
+            Inicializamos el juego cargando la lista de vectores para nuestro snake, le asignamos una direccion
+            y vamos moviendo esa lista de vectores, creamos la comida e iniciamos el puntaje en 0
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.Frutita.rPosition">
+            <summary>
+            Definimos el random para generar posiciones aleatorias para la comida
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Frutita.resetComida">
+            <summary>
+            Este metodo reinicia la posicion de la comida en la pantalla
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.kinect">
+            <summary>
+            Declaramos un objeto de tipo Kinect para leer su informacion
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloCabeza">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloHombroDerecho">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloHombroIzquierdo">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloCodoIzquierdo">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloCodoDerecho">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloRodillaDerecho">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloRodillaIzquierdo">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectangulopPieDerecho">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloPieIzquierdo">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloTorso">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloManoIzquierda">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloHombroCentro">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.rectanguloCursor">
+            <summary>
+            Definimos los rectangulos del skeleton para seguirlo y poder dibujarlo 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.puntoManoDerecha">
+            <summary>
+            Spritesfots y puntos de las articulaciones del cuerpo del jugador tomados del kinect
+            </summary>
+            
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.ZDerecha">
+            <summary>
+            Variables usadas para guardar la profundidad de algunos puntos del cuerpo necesarios
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.ZIzquierda">
+            <summary>
+            Variables usadas para guardar la profundidad de algunos puntos del cuerpo necesarios
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.KinectTools.ZTorso">
+            <summary>
+            Variables usadas para guardar la profundidad de algunos puntos del cuerpo necesarios
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.KinectTools.leerKinect">
+            <summary>
+            En este metodo generamos la lectura del kinect Mediante un manejo de exepciones
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.KinectTools.uptade(KukulcanGame.KukulcanControlador.Mapa)">
+            <summary>
+            Ese método nos ayuda a determinar el estado de juego, recibiendo como parámetro
+            la referencia de la clase Mapa
+            </summary>
+            <param name="GameMap"></param>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.KinectTools.controlKinect(KukulcanGame.KukulcanControlador.Body)">
+            <summary>
+            Este método nos ayuda a controlar el Snake recibiendo una referencia de la clase Snake
+            mediante el cuál se determina la dirección de la culebrita dependiendo del movimiento del jugador
+            </summary>
+            <param name="snake"></param>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.KinectTools.Kinect_SkeletonFrameReady(System.Object,Microsoft.Kinect.SkeletonFrameReadyEventArgs)">
+            <summary>
+             En este metodo se realiza el trackeo de las articulaciones del jugador
+            definiendo las articulaciones del jugador, trakeando sus movimientos, recibe como parámetros
+            los eventos de lectura del kinect y un objeto sender 
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.KinectTools.drawSkeletonTracking(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Graphics.Texture2D,KukulcanGame.KukulcanControlador.Body)">
+            <summary>
+            Este metodo nos dibuja a la persona en el cuadro de abajo del juego
+            recibe como parámetro los datos necesarios para realizar la impresión, como spriteBatch y el tile
+            </summary>
+            <param name="spriteBatch"></param>
+            <param name="genericTile"></param>
+            <param name="snake"></param>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.KinectTools.rectangulosSkeleton">
+            <summary>
+             Definimos las coordenadas de los rectangulos del cuerpo del skeleton para dibujarlo en la seccion del juego 
+            </summary>
+        </member>
+        <member name="T:KukulcanGame.KukulcanControlador.Mapa.GameState">
+            <summary>
+            Definimos un numero de estados que puede tomar nuestro GameState que serian 
+            nuestras ventanas e inicializamos en SplashScreen
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanControlador.Mapa.pantallas">
+            <summary>
+            Hacemos referencia al enum de estados de juego
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.splashScreen">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Splash Screen</returns>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.lobby">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Menu</returns>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.selectHand">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Seleccion de manos</returns>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.game">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Juego</returns>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.scores">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Puntajes</returns>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.saveScores">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Guardar Puntajes</returns>
+        </member>
+        <member name="M:KukulcanGame.KukulcanControlador.Mapa.credits">
+            <summary>
+            Metodo para cambiar de estado de juego
+            </summary>
+            <returns>Creditos</returns>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.genericTile">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.btJugar">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.btScores">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.btExit">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.head">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.bg">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.tile">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.U">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.D">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.R">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.KukulcanVista.Sprites.L">
+            <summary>
+            Declaramos los tipos de texturas que vamos a manejar en el proyecto
+            las texturas son las imagenes que vamos a estar usando
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.KukulcanVista.Sprites.loadSprites(Microsoft.Xna.Framework.Content.ContentManager)">
+            <summary>
+            Recibe como parámetro la dirección del content manager como referencia
+            Este método carga los sprites del juego
+            </summary>
+            <param name="Content"></param>
+        </member>
+        <member name="M:KukulcanGame.KukulcanVista.Sprites.border(System.Boolean,Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            /// Este metodo dibuja los contornos de la pantalla en el state de juego y seleccion de mano
+            cuando @dato == true dibuja la seccion del juego
+            cuando @dato == false dibuja la seccion de seleccion de manos
+            Recibe referencia de spriteBatch
+            </summary>
+            <param name="dato"></param>
+            <param name="spriteBatch"></param>
+        </member>
+        <member name="M:KukulcanGame.KukulcanVista.Sprites.cuadroPuntajes(Microsoft.Xna.Framework.Graphics.SpriteBatch)">
+            <summary>
+            Este metodo solo dibuja el cuadro utilizado en la pantalla puntajes, que es el cuadrado de los tiles
+            Recibe como parámetro una referencia de objeto spriteBatch
+            </summary>
+            <param name="spriteBatch"></param>
+        </member>
+        <member name="T:KukulcanGame.BDcomun">
+            <summary>
+            Clase que realiza la conexion con la base de datos y su gestion 
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.BDcomun.cargarPuntajes">
+            <summary>
+            Este metodo retorna una lista de datos que se toman de la base de datos
+            tomando en cuenta que es el nombre y el puntaje del jugador
+            </summary>
+            <returns>lstPuntajes</returns>
+        </member>
+        <member name="M:KukulcanGame.BDcomun.guardarPuntaje(System.String,System.Int32)">
+            <summary>
+            Este metodo nos guarda los datos del jugador recibiendo el nombre y el puntaje del jugador
+            recibe nombre y puntaje como parametro y genera el insert en la base de datos
+            </summary>
+            <param name="nombre"></param>
+            <param name="puntaje"></param>
+        </member>
+        <member name="T:KukulcanGame.Game1">
+            <summary>
+            Clase principal mediante la cual se ejecutan los juegos
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.graphics">
+            <summary>
+            El graphics se genera por defecto para tomar los recursos de la pantalla al igual que 
+            el spriteBatch c:
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.manosArriba">
+            <summary>
+            Esta variable nos ayuda a determinar si en la seleccion de mano el usuario levanto 
+            ambas manos, cosa que no debe hacer
+            Variable para determinar si el juego termina
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.gameOver">
+            <summary>
+            Esta variable nos ayuda a determinar si en la seleccion de mano el usuario levanto 
+            ambas manos, cosa que no debe hacer
+            Variable para determinar si el juego termina
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.lstPuntajes">
+            <summary>
+            Lista donde se almacenan los puntajes que retorna un metodo de la clase BDcomun
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.vcJugar">
+            <summary>
+            Definimos los vectores para los objetos que vamos a utilizar en el juego
+            Los vectores 2D es donde se van a guardar
+            las posiciones de cada objeto
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.vcScores">
+            <summary>
+            Definimos los vectores para los objetos que vamos a utilizar en el juego
+            Los vectores 2D es donde se van a guardar
+            las posiciones de cada objeto
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.vcExit">
+            <summary>
+            Definimos los vectores para los objetos que vamos a utilizar en el juego
+            Los vectores 2D es donde se van a guardar
+            las posiciones de cada objeto
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.rcJugar">
+            <summary>
+            Definimos los rectangulos para poder generar las intersecciones del evento del kinect
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.rcScores">
+            <summary>
+            Definimos los rectangulos para poder generar las intersecciones del evento del kinect
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.rcExit">
+            <summary>
+            Definimos los rectangulos para poder generar las intersecciones del evento del kinect
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.rcCreditos">
+            <summary>
+            Definimos los rectangulos para poder generar las intersecciones del evento del kinect
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.rcMenu">
+            <summary>
+            Definimos los rectangulos para poder generar las intersecciones del evento del kinect
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.rcMenu2">
+            <summary>
+            Definimos los rectangulos para poder generar las intersecciones del evento del kinect
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.bSize">
+             <summary>
+            bSize es un valor generico para los tiles que manejamos que son de 50x50 pixeles
+            sSize es el size de la culebrita y las variables de ajuste son para pintar el cuerpo 
+            del jugador
+             </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.sSize">
+             <summary>
+            bSize es un valor generico para los tiles que manejamos que son de 50x50 pixeles
+            sSize es el size de la culebrita y las variables de ajuste son para pintar el cuerpo 
+            del jugador
+             </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.frames">
+            <summary>
+            Estas variables son necesarias para la animacion de la mano cuando se poscisiona sobre un boton en 
+            la pantalla del juego 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.fps">
+            <summary>
+            Estas variables son necesarias para la animacion de la mano cuando se poscisiona sobre un boton en 
+            la pantalla del juego 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.increase">
+            <summary>
+            Estas variables son necesarias para la animacion de la mano cuando se poscisiona sobre un boton en 
+            la pantalla del juego 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.velocidad">
+            <summary>
+            Estas variables son necesarias para la animacion de la mano cuando se poscisiona sobre un boton en 
+            la pantalla del juego 
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.audioSplash">
+            <summary>
+            Definimos variables donde guardaremos los sonidos que hemos de usar para el juego 
+            tanto como la parte de comer, como los bricks, como el splash y la musica de fondo
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.lstManoCargando">
+            <summary>
+            Lista de texturas para el cursor
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.letra1">
+            <summary>
+            Variables usadas para guardar el nombre del usuario
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.letra2">
+            <summary>
+            Variables usadas para guardar el nombre del usuario
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.texto">
+            <summary>
+            Variable de texto para la impresion de letras en la pantalla
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.textoAlerta">
+            <summary>
+            Variable de texto para la impresion de letras en la pantalla
+            </summary>
+        </member>
+        <member name="F:KukulcanGame.Game1.mapa">
+            <summary>
+            Referencia de las clases utilizadas
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Game1.#ctor">
+            <summary>
+            Nuestro constructor del juego ejecuta en estos graficos el juego y 
+            define la carpeta de contenido de donde se tomaran los recursos del juego
+            Tambien se definen las dimensiones de la ventana dadas en Pixeles de 1500x750 pixeles
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Game1.Initialize">
+            <summary>
+            Iniciamos la lectura del kinect en este metodo
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Game1.LoadContent">
+            <summary>
+            Cargamos el contenido de cada textura con los graficos guardados en el content y sonidos
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Game1.EndRun">
+            <summary>
+            Este metodo termina la ejecucion del kinect
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Game1.gameSnake(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Este metodo recibe como @parametro gameTime que es el tiempo de ejecucion del juego, es necesario
+            para validar los movimientos del juego y controlar las posciones
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.drawSnake">
+            <summary>
+            Este metodo de spriteBatches nos sirve para pintar los tiles del snake por cada posicion que tenga del vector
+            pinta la cabeza, el cuerpo y la comida en el campo
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Game1.verificarMano(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Este metodo verifica que no haya dos manos levantadas, ya que no puedes jugar con dos manos y recibe 
+            como parametro el tiempo del juego
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.lobbyMap(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Este método valida las intersecciones del cursor con los botones del lobby
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.creditosMap(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Este método resive como parámetro el tiempo de juego, sólo genera la intesección del cursor con el botón menú
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.verPuntajes(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Este método muestra los puntajes del juego tomados desde modelo
+             valida las intersecciones del  cursor con el botón menú 
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.guardadPuntajes(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Guardar puntajes es el método en el cuál se ejecuta la lógica de guardar puntajes, se maneja el rectángulo
+            del cursor generado por el kinect y resive como parámetro el tiempo de juego
+            
+            El método valida las intersecciones del cursor con los botones y cambia las letras de la pantalla
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.Update(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Esta funcion es el bucle para la logica del juego, en este apartado se ejectutan las acciones del juego
+            actualmente lu usamos para definir los estados del proyecto que vamos a usar 
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Game1.Draw(Microsoft.Xna.Framework.GameTime)">
+            <summary>
+            Este metodo recibe como parametro el tiempo de ejecucion del juego
+            otro metodo nos ayuda a dibujar todo, al igual que el Update este esta seccionado por un switch y cases
+            dependiendo del gameState es la pantalla que va a dibujar, todos los dibujos de sprites tienen que ir en 
+            este metodo y siempre inicia con un spriteBatch.Begin(); y terminamos con un spriteBatch.End();
+            
+            Cada estructura de spriteBatch.Draw() esta dada de la siguiente manera
+            spriteBatch.Draw(parametroDeTextura,parametroDeVector,parametroDeColor);
+            Siempre debe recibir una textura para poder tener algo que dibujar
+            Siempre debe tener una posicion donde dibujar, para eso se le pasa el vector
+            El vector se puede inicalizar arriba o bien, en esta seccion, pero es mejor arriba
+            asi en esta seccion solamente se llama
+            El color siempre tiene que ir, si no pasas ese parametro tendras un warning, si corre
+            pero no es lo mas optimo, para que no cambie el color de la textura que tenemos le pasamos
+            como parametro el Color.White que ya viene por defecto, pero podemos generar directamente 
+            el color pasando parametros de color RGB al constructor de la clase new Color(Red, Green, Blue)
+            tomando en cuenta que es del 0 al 255 en cada uno o bien del 00000 al FFFFFF
+            
+            Cada spriteBatch.DrawString() esta dada de la siguiente manera
+            spriteBatch.DrawString(tipoDeFuente,"el texto a imprimir",vectorDePosicion, colorDelTexto);
+            La diferencia mas significativa del Draw regular es el tipo de fuente y el texto, lo demas es
+            muy similar
+            </summary>
+            <param name="gameTime"></param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawPoints(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Collections.Generic.List{Microsoft.Xna.Framework.Vector2},Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a list of connecting points
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            /// <param name="position">Where to position the points</param>
+            <param name="points">The points to connect with lines</param>
+            <param name="color">The color to use</param>
+            <param name="thickness">The thickness of the lines</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.CreateCircle(System.Double,System.Int32)">
+            <summary>
+            Creates a list of vectors that represents a circle
+            </summary>
+            <param name="radius">The radius of the circle</param>
+            <param name="sides">The number of sides to generate</param>
+            <returns>A list of vectors that, if connected, will create a circle</returns>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.CreateArc(System.Single,System.Int32,System.Single,System.Single)">
+            <summary>
+            Creates a list of vectors that represents an arc
+            </summary>
+            <param name="radius">The radius of the arc</param>
+            <param name="sides">The number of sides to generate in the circle that this will cut out from</param>
+            <param name="startingAngle">The starting angle of arc, 0 being to the east, increasing as you go clockwise</param>
+            <param name="radians">The radians to draw, clockwise from the starting angle</param>
+            <returns>A list of vectors that, if connected, will create an arc</returns>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.FillRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a filled rectangle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="rect">The rectangle to draw</param>
+            <param name="color">The color to draw the rectangle in</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.FillRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a filled rectangle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="rect">The rectangle to draw</param>
+            <param name="color">The color to draw the rectangle in</param>
+            <param name="angle">The angle in radians to draw the rectangle at</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.FillRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a filled rectangle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="location">Where to draw</param>
+            <param name="size">The size of the rectangle</param>
+            <param name="color">The color to draw the rectangle in</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.FillRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a filled rectangle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="location">Where to draw</param>
+            <param name="size">The size of the rectangle</param>
+            <param name="angle">The angle in radians to draw the rectangle at</param>
+            <param name="color">The color to draw the rectangle in</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.FillRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a filled rectangle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="x">The X coord of the left side</param>
+            <param name="y">The Y coord of the upper side</param>
+            <param name="w">Width</param>
+            <param name="h">Height</param>
+            <param name="color">The color to draw the rectangle in</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.FillRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a filled rectangle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="x">The X coord of the left side</param>
+            <param name="y">The Y coord of the upper side</param>
+            <param name="w">Width</param>
+            <param name="h">Height</param>
+            <param name="color">The color to draw the rectangle in</param>
+            <param name="angle">The angle of the rectangle in radians</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a rectangle with the thickness provided
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="rect">The rectangle to draw</param>
+            <param name="color">The color to draw the rectangle in</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Rectangle,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a rectangle with the thickness provided
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="rect">The rectangle to draw</param>
+            <param name="color">The color to draw the rectangle in</param>
+            <param name="thickness">The thickness of the lines</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a rectangle with the thickness provided
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="location">Where to draw</param>
+            <param name="size">The size of the rectangle</param>
+            <param name="color">The color to draw the rectangle in</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawRectangle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a rectangle with the thickness provided
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="location">Where to draw</param>
+            <param name="size">The size of the rectangle</param>
+            <param name="color">The color to draw the rectangle in</param>
+            <param name="thickness">The thickness of the line</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a line from point1 to point2 with an offset
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="x1">The X coord of the first point</param>
+            <param name="y1">The Y coord of the first point</param>
+            <param name="x2">The X coord of the second point</param>
+            <param name="y2">The Y coord of the second point</param>
+            <param name="color">The color to use</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,System.Single,System.Single,System.Single,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a line from point1 to point2 with an offset
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="x1">The X coord of the first point</param>
+            <param name="y1">The Y coord of the first point</param>
+            <param name="x2">The X coord of the second point</param>
+            <param name="y2">The Y coord of the second point</param>
+            <param name="color">The color to use</param>
+            <param name="thickness">The thickness of the line</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a line from point1 to point2 with an offset
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="point1">The first point</param>
+            <param name="point2">The second point</param>
+            <param name="color">The color to use</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Vector2,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a line from point1 to point2 with an offset
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="point1">The first point</param>
+            <param name="point2">The second point</param>
+            <param name="color">The color to use</param>
+            <param name="thickness">The thickness of the line</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single,System.Single,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draws a line from point1 to point2 with an offset
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="point">The starting point</param>
+            <param name="length">The length of the line</param>
+            <param name="angle">The angle of this line from the starting point in radians</param>
+            <param name="color">The color to use</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawLine(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single,System.Single,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draws a line from point1 to point2 with an offset
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="point">The starting point</param>
+            <param name="length">The length of the line</param>
+            <param name="angle">The angle of this line from the starting point</param>
+            <param name="color">The color to use</param>
+            <param name="thickness">The thickness of the line</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawCircle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single,System.Int32,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draw a circle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="center">The center of the circle</param>
+            <param name="radius">The radius of the circle</param>
+            <param name="sides">The number of sides to generate</param>
+            <param name="color">The color of the circle</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawCircle(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single,System.Int32,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draw a circle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="center">The center of the circle</param>
+            <param name="radius">The radius of the circle</param>
+            <param name="sides">The number of sides to generate</param>
+            <param name="color">The color of the circle</param>
+            <param name="thickness">The thickness of the lines used</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawCircle(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,System.Single,System.Single,System.Int32,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draw a circle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="x">The center X of the circle</param>
+            <param name="y">The center Y of the circle</param>
+            <param name="radius">The radius of the circle</param>
+            <param name="sides">The number of sides to generate</param>
+            <param name="color">The color of the circle</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawCircle(Microsoft.Xna.Framework.Graphics.SpriteBatch,System.Single,System.Single,System.Single,System.Int32,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draw a circle
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="x">The center X of the circle</param>
+            <param name="y">The center Y of the circle</param>
+            <param name="radius">The radius of the circle</param>
+            <param name="sides">The number of sides to generate</param>
+            <param name="color">The color of the circle</param>
+            <param name="thickness">The thickness of the lines used</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawArc(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single,System.Int32,System.Single,System.Single,Microsoft.Xna.Framework.Color)">
+            <summary>
+            Draw a arc
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="center">The center of the arc</param>
+            <param name="radius">The radius of the arc</param>
+            <param name="sides">The number of sides to generate</param>
+            <param name="startingAngle">The starting angle of arc, 0 being to the east, increasing as you go clockwise</param>
+            <param name="radians">The number of radians to draw, clockwise from the starting angle</param>
+            <param name="color">The color of the arc</param>
+        </member>
+        <member name="M:KukulcanGame.Primitives2D.DrawArc(Microsoft.Xna.Framework.Graphics.SpriteBatch,Microsoft.Xna.Framework.Vector2,System.Single,System.Int32,System.Single,System.Single,Microsoft.Xna.Framework.Color,System.Single)">
+            <summary>
+            Draw a arc
+            </summary>
+            <param name="spriteBatch">The destination drawing surface</param>
+            <param name="center">The center of the arc</param>
+            <param name="radius">The radius of the arc</param>
+            <param name="sides">The number of sides to generate</param>
+            <param name="startingAngle">The starting angle of arc, 0 being to the east, increasing as you go clockwise</param>
+            <param name="radians">The number of radians to draw, clockwise from the starting angle</param>
+            <param name="color">The color of the arc</param>
+            <param name="thickness">The thickness of the arc</param>
+        </member>
+        <member name="T:KukulcanGame.Program">
+            <summary>
+            The main class.
+            </summary>
+        </member>
+        <member name="M:KukulcanGame.Program.Main">
+            <summary>
+            The main entry point for the application.
+            </summary>
+        </member>
+    </members>
+</doc>

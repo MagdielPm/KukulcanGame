@@ -149,9 +149,9 @@ namespace KukulcanGame.KukulcanControlador
             {
                 if (esqueleto.TrackingState == SkeletonTrackingState.Tracked)
                 {
-                    /// <summary>
-                    /// Aqui solo estan trackeando todas las articulaciones del cuerpo del jugador
-                    /// </summary>
+
+                    // Aqui solo estan trackeando todas las articulaciones del cuerpo del jugador
+
                     Joint handJointRight = esqueleto.Joints[JointType.HandRight];
                     Joint handJointLeft = esqueleto.Joints[JointType.HandLeft];
                     Joint Torso = esqueleto.Joints[JointType.Spine];
@@ -165,10 +165,10 @@ namespace KukulcanGame.KukulcanControlador
                     Joint pieIzquierdo = esqueleto.Joints[JointType.FootLeft];
                     Joint pieDerecho = esqueleto.Joints[JointType.FootRight];
                     Joint hombroCentro = esqueleto.Joints[JointType.ShoulderCenter];
-                    /// <summary>
-                    /// Esta seccion toma los valores de cada articulacion y se las asigna
-                    /// a cada ColorImagePointer declarado en la seccion superior
-                    /// </summary>
+
+                    // Esta seccion toma los valores de cada articulacion y se las asigna
+                    // a cada ColorImagePointer declarado en la seccion superior
+
                     ZDerecha = handJointRight.Position.Z;
                     ZIzquierda = handJointLeft.Position.Z;
                     ZTorso = Torso.Position.Z;
@@ -188,10 +188,10 @@ namespace KukulcanGame.KukulcanControlador
 
                 }
             }
-            /// < summary >
-            /// En esta seccion lo que hace es redefinir el size del cursor posicionado en pantalla
-            /// con la mano, ya que si no, su movimiento seria muy limitado
-            /// </ summary >
+
+            // En esta seccion lo que hace es redefinir el size del cursor posicionado en pantalla
+            // con la mano, ya que si no, su movimiento seria muy limitado
+
             if (pantallaJuego == false)
             {
                 if (puntoManoDerecha.X < 200) { puntoManoDerecha.X = 200; }
@@ -218,10 +218,10 @@ namespace KukulcanGame.KukulcanControlador
         /// <param name="snake"></param>
         public void drawSkeletonTracking(SpriteBatch spriteBatch, Texture2D genericTile, Body snake)
         {
-            /// <summary>
-            /// Esta seccion solamente dibuja el mapa donde aparece la persona y determina el color 
-            /// que debe tomar dependiendo de la direccion que tenga el snake
-            /// </summary>
+
+            // Esta seccion solamente dibuja el mapa donde aparece la persona y determina el color 
+            // que debe tomar dependiendo de la direccion que tenga el snake
+
             #region MapaPersona
             if (snake.direccion == 0)
             {
@@ -253,10 +253,10 @@ namespace KukulcanGame.KukulcanControlador
             }
 
             #endregion
-            /// <summary>
-            /// Aqui dibujamos el cuerpo de la persona desde sus articulaciones hasta las lineas que 
-            /// las unen, o sea, las lineas negritas que aparecen 
-            /// </summary>
+
+            // Aqui dibujamos el cuerpo de la persona desde sus articulaciones hasta las lineas que 
+            // las unen, o sea, las lineas negritas que aparecen 
+
             #region Skeleton
 
             if (((puntoCabeza.X + ajuste) >= 1000 && (puntoCabeza.Y + ajusteV) <= 700))
