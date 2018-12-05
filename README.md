@@ -6,4 +6,4 @@ Recursos utilizados para el proyecto:
   - Base de datos MySql con Xampp y PhpMyAdmin
 
 Desarrollador del proyecto: 
- -- [Magdiel Joab Pech Menéndez](https://github.com/MagdielPm)
+ - [Magdiel Joab Pech Menéndez](https://github.com/MagdielPm)
