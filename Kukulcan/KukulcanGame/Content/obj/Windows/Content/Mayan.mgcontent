@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Mayan.spritefont</SourceFile>
+  <SourceTime>2018-10-29T02:38:51.641728-06:00</SourceTime>
+  <DestFile>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/bin/Windows/Content/Mayan.xnb</DestFile>
+  <DestTime>2018-10-31T01:19:08.8536887-06:00</DestTime>
+  <Importer>FontDescriptionImporter</Importer>
+  <ImporterTime>2018-09-23T16:55:52-05:00</ImporterTime>
+  <Processor>FontDescriptionProcessor</Processor>
+  <ProcessorTime>2018-09-23T16:55:52-05:00</ProcessorTime>
+  <Parameters>
+    <Key>PremultiplyAlpha</Key>
+    <Value>True</Value>
+  </Parameters>
+  <Parameters>
+    <Key>TextureFormat</Key>
+    <Value>Compressed</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>

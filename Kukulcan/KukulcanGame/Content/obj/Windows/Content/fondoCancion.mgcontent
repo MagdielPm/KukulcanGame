@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/fondoCancion.mp3</SourceFile>
+  <SourceTime>2018-10-30T11:47:54.3903728-06:00</SourceTime>
+  <DestFile>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/bin/Windows/Content/fondoCancion.xnb</DestFile>
+  <DestTime>2018-10-31T01:21:58.5850375-06:00</DestTime>
+  <Importer>Mp3Importer</Importer>
+  <ImporterTime>2018-09-23T16:55:52-05:00</ImporterTime>
+  <Processor>SongProcessor</Processor>
+  <ProcessorTime>2018-09-23T16:55:52-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput>
+    <string>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/bin/Windows/Content/fondoCancion.wma</string>
+  </BuildOutput>
+</PipelineBuildEvent>

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SourceFileCollection xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Profile>Reach</Profile>
+  <Platform>Windows</Platform>
+  <Config />
+  <SourceFiles>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/backGroundMenu.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Bg.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/boton.wav</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brick.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brick1.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brick2.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brick3.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brick4.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brick5.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brickBot.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brickBotMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brickTop.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/brickTopMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnCreditos.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnCreditosMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnJugar.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnJugarMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnMenu.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnMenuMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnPuntajes.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnPuntajesMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnSalir.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/btnSalirMouse.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/comida.wav</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/elote.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/explosion.wav</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/File.spritefont</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/flechaDown.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/flechaUp.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/fondo.wav</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/fondoCancion.mp3</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/FontAlert.spritefont</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/handLeft.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/handRight.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/HeadD.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/HeadL.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/HeadR.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/HeadU.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/iconProyect.ico</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/imagenSplash.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Lh.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/LhSelect.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/logo.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/manoLoad1.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/manoLoad2.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/manoLoad3.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/manoLoad4.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/manoLoad5.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/manoLoad6.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Mayan.spritefont</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/MayanBig.spritefont</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/MonkeyLogo.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/planLeftbot.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/planLeftTop.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/planRightLeft2.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/planRightTop.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Rh.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/RhSelect.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/sonido.wav</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Tile.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/TileSnake.png</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/Titulo.spritefont</File>
+    <File>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/top5.png</File>
+  </SourceFiles>
+  <DestFiles>
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+    <File xsi:nil="true" />
+  </DestFiles>
+</SourceFileCollection>

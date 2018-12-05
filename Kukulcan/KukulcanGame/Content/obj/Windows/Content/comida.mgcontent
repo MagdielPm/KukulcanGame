@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <SourceFile>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/comida.wav</SourceFile>
+  <SourceTime>2018-10-28T23:50:28.5420728-06:00</SourceTime>
+  <DestFile>C:/Users/65311713/Desktop/Kukulcan f/KukulcanGame/Content/bin/Windows/Content/comida.xnb</DestFile>
+  <DestTime>2018-10-31T01:19:00.3631023-06:00</DestTime>
+  <Importer>WavImporter</Importer>
+  <ImporterTime>2018-09-23T16:55:52-05:00</ImporterTime>
+  <Processor>SoundEffectProcessor</Processor>
+  <ProcessorTime>2018-09-23T16:55:52-05:00</ProcessorTime>
+  <Parameters>
+    <Key>Quality</Key>
+    <Value>Best</Value>
+  </Parameters>
+  <Dependencies />
+  <BuildAsset />
+  <BuildOutput />
+</PipelineBuildEvent>
