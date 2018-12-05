@@ -1,6 +1,7 @@
 # KukulcanGame
 Código fuente del proyecto Kukulcan controlado mediante el sensor Kinect V1 con el lenguaje de programación C#
 Recursos utilizados para el proyecto: 
+  - Visual Studio C#
   - Kinect V1 para Xbox 360
   - Framework Monogame
   - Base de datos MySql con Xampp y PhpMyAdmin
