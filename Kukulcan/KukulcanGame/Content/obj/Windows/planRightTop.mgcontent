@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Users/Magdiel/Desktop/Materias/Proyectos/Proyecto Kukulcan/Kukulcan/Kukulcan/KukulcanGame/Content/planRightTop.png</SourceFile>
+  <SourceFile>C:/Users/Magdiel/Desktop/Proyecto/KukulcanGame/Kukulcan/KukulcanGame/Content/planRightTop.png</SourceFile>
   <SourceTime>2018-10-08T16:46:56-05:00</SourceTime>
-  <DestFile>C:/Users/Magdiel/Desktop/Materias/Proyectos/Proyecto Kukulcan/Kukulcan/Kukulcan/KukulcanGame/Content/bin/Windows/planRightTop.xnb</DestFile>
-  <DestTime>2018-12-04T20:54:24.0199185-06:00</DestTime>
+  <DestFile>C:/Users/Magdiel/Desktop/Proyecto/KukulcanGame/Kukulcan/KukulcanGame/Content/bin/Windows/planRightTop.xnb</DestFile>
+  <DestTime>2018-12-05T15:10:48.0130353-06:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2017-03-01T09:05:36-06:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
